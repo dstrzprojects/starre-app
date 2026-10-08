@@ -1,0 +1,13 @@
+**/node_modules
+**/dist
+**/.angular
+.venv
+.env
+compose.local.yaml
+*.sql
+**/__pycache__
+**/*.pyc
+**/local-test.sqlite3
+backend/media
+backend/staticfiles
+.git

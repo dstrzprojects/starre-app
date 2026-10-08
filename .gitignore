@@ -1,0 +1,13 @@
+.env
+compose.local.yaml
+*.sql
+.venv/
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+backend/frontend/
+backend/media/
+backend/staticfiles/
+backend/local-test.sqlite3
+__pycache__/
+*.pyc

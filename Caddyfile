@@ -1,0 +1,17 @@
+{$DOMAIN} {
+    encode zstd gzip
+    request_body {
+        max_size 4MB
+    }
+    handle /media/* {
+        root * /srv
+        header Content-Security-Policy "default-src 'none'; sandbox"
+        header X-Content-Type-Options nosniff
+        file_server
+    }
+    handle {
+        reverse_proxy web:8000 {
+            header_up X-Real-IP {remote_host}
+        }
+    }
+}
