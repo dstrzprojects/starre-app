@@ -65,20 +65,7 @@ Ta wersja nie wysyła powiadomień push i nie obsługuje edycji wydarzeń bez po
 
 Frontend: `cd frontend && npm ci && npm run build`. Backend: `python3 -m venv .venv && .venv/bin/pip install -r requirements.txt`, potem `cd backend && DB_ENGINE=sqlite DJANGO_DEBUG=1 ../.venv/bin/python manage.py test core`. Tryb SQLite służy wyłącznie testom lokalnym; instalacja serwerowa używa PostgreSQL.
 
-## Nowy układ na komputerze
+## Układ na komputerze
 
 Przy szerokości od 1024 px aplikacja wyświetla boczną nawigację, karty w kolumnach, dwupanelowe szczegóły wydarzenia i szersze formularze. Na telefonie zachowuje dotychczasowy układ.
 
-### Aktualizacja istniejącej wersji na Windows
-
-Rozpakuj zawartość folderu `starre-app` z tej paczki do istniejącego folderu `starre-app`, zastępując pliki aplikacji. Zachowaj swój `compose.local.yaml` oraz `.env`. Nie zmieniaj nazwy folderu ani nie usuwaj wolumenów Docker — Twoje konta i wpisy pozostaną w dotychczasowej bazie.
-
-W PowerShellu otwartym w tym folderze wykonaj:
-
-```powershell
-docker compose -f compose.local.yaml up -d --build
-```
-
-Po zakończeniu otwórz http://localhost:8000/ w nowym oknie prywatnym. Jeżeli zwykłe okno pokazuje poprzednią wersję, usuń dane witryny localhost w przeglądarce i ponownie otwórz stronę (wyloguje to konto, ale nie usuwa danych w bazie).
-
-Wydarzenie ma opcjonalne pole „Podsumowanie tematu”; jeśli pozostawisz je puste, sekcja nie pokaże się uczestnikom.
