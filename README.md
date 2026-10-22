@@ -1,4 +1,4 @@
-# Berea — strona i aplikacja na telefon
+# Starre/Berea — strona i aplikacja na telefon
 
 Ta paczka zawiera Angular (interfejs HTML), Django (logowanie i API), PostgreSQL oraz konfigurację PWA. Zawiera kod źródłowy i zbudowany interfejs; serwer z Docker Compose zbuduje go ponownie podczas instalacji.
 
